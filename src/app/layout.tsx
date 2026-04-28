@@ -5,6 +5,8 @@ import Header from "@/components/layout/Header";
 import Footer from "@/components/layout/Footer";
 import FloatingCallButton from "@/components/layout/FloatingCallButton";
 import JsonLd from "@/components/seo/JsonLd";
+import DemoBanner from "@/components/DemoBanner";
+import { SITE_INDEXED } from "@/lib/constants";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -48,8 +50,12 @@ export const metadata: Metadata = {
       "Tu dentista de confianza en Madrid desde 1995. Implantología, estética dental, endodoncia y más.",
   },
   robots: {
-    index: true,
-    follow: true,
+    index: SITE_INDEXED,
+    follow: SITE_INDEXED,
+    googleBot: {
+      index: SITE_INDEXED,
+      follow: SITE_INDEXED,
+    },
   },
   alternates: {
     canonical: "https://clinicadentalgonzalorenilla-web.vercel.app",
@@ -71,6 +77,7 @@ export default function RootLayout({
         <main className="pt-16 md:pt-20">{children}</main>
         <Footer />
         <FloatingCallButton />
+        <DemoBanner />
       </body>
     </html>
   );

@@ -96,3 +96,9 @@ export const TREATMENTS = [
     desc: "Para pacientes con ansiedad dental, ofrecemos sedación consciente y la posibilidad de ver películas o documentales con las gafas 3D Cinemizer OLED de Zeiss durante el tratamiento. Una experiencia completamente diferente en el sillón dental.",
   },
 ];
+
+// URL de la web original del cliente (usada en el banner de demo)
+export const ORIGINAL_URL = "https://clinicadentalgonzalorenilla.es/";
+
+// Cambiar a true para habilitar la indexación en Google
+export const SITE_INDEXED = false;
